@@ -21,4 +21,14 @@
     ```
 * Browse http://127.0.0.1:8080/
 ### vnc-browser
-See https://github.com/MRColorR/vnc-browser
+* See https://github.com/MRColorR/vnc-browser
+* See https://accetto.github.io/user-guide-g3/image-family/#firefox-and-chromium
+  * step 1
+    ```bash
+     docker run -d -p "6080:6901" --name vpn --hostname vpn accetto/ubuntu-vnc-xfce-chromium-g3
+     docker run --rm -p "6080:6901" --name vpn --hostname vpn accetto/ubuntu-vnc-xfce-chromium-g3
+     docker run --rm -p "6080:6901" --name vpn --hostname vpn  accetto/ubuntu-vnc-xfce-firefox-g3
+    ```
+  * step 2    
+    The container will keep running in the background and you can connect to it using your web browser on the following URL:
+    `http://localhost:6080` . user: `headless` , passwd: `headless`
