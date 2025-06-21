@@ -25,10 +25,16 @@
 * See https://accetto.github.io/user-guide-g3/image-family/#firefox-and-chromium
   * step 1
     ```bash
-     docker run -d -p "6080:6901" --name vpn --hostname vpn accetto/ubuntu-vnc-xfce-chromium-g3
-     docker run --rm -p "6080:6901" --name vpn --hostname vpn accetto/ubuntu-vnc-xfce-chromium-g3
-     docker run --rm -p "6080:6901" --name vpn --hostname vpn  accetto/ubuntu-vnc-xfce-firefox-g3
+     docker run -d -p "6080:6901" --name vnc --hostname vpn accetto/ubuntu-vnc-xfce-chromium-g3
+     docker run --rm -p "6080:6901" --name vnc --hostname vpn accetto/ubuntu-vnc-xfce-chromium-g3
+     docker run --rm -p "6080:6901" --name vnc --hostname vpn  accetto/ubuntu-vnc-xfce-firefox-g3
     ```
   * step 2    
     The container will keep running in the background and you can connect to it using your web browser on the following URL:
     `http://localhost:6080` . user: `headless` , passwd: `headless`
+* See
+  * https://blog.51sec.org/2021/01/install-ubuntu-1804-xfce4-desktop-in.html
+  * https://github.com/ConSol/docker-headless-vnc-container/
+    ```bash
+    docker run --rm -p 6901:6901  --name vnc ghcr.io/consol/docker-headless-vnc-container/debian-xfce-vnc:nightly
+    ```
